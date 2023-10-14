@@ -8,7 +8,8 @@ class Field:
         return str(self.value)
 
 class Name(Field):
-    pass
+    def __init__(self, value):
+        self.value = value
 
 class Phone(Field):
     def __init__(self, value):

@@ -62,11 +62,9 @@ class AddressBook(UserDict):
     def find(self, phone_name):
         return self.data.get(phone_name)
 
-    def delete(self, phone_name):
-        if phone_name in self.data:
-            del self.data[phone_name]
-            return f"Deleted contact: {phone_name}"
-        return f"Contact {phone_name} not found."
+    def delete(self, name):
+            if name in self.data.keys():
+                self.data.pop(name)
 
 if __name__ == "__main__":
     book = AddressBook()
